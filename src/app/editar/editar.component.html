@@ -1,0 +1,36 @@
+<h1 class="text-center">Editar Cadastro</h1>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-4">
+            <img src="{{produto.imagem}}" class="card-img-top img-fluid " alt="imagem do produto">
+        </div>
+
+        <div class="col-8">
+            <div>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" placeholder="Digite o nome do produto"
+                        [(ngModel)]="produto.nome" id="nome">
+                </div>
+                <div class="form-group">
+                    <label for="preco">Preço</label>
+                    <input type="text" class="form-control" id="preco" placeholder="Digite o preço do produto"
+                        [(ngModel)]="produto.preco">
+                </div>
+                <div class="form-group">
+                    <label for="imagemProduto">Imagem</label>
+                    <input type="text" class="form-control" id="imagemProduto" placeholder="Digite a URL da imagem"
+                        [(ngModel)]="produto.imagem">
+                </div>
+                <div class="form-group">
+                    <label for="qtdEstoque">Quantidade em Estoque</label>
+                    <input type="text" class="form-control" id="qtdEstoque" placeholder="Digite a quantidade em estoque"
+                        [(ngModel)]="produto.qtdEstoque">
+                </div>
+                <button type="submit" class="btn btn-primary  mb-5" (click)="salvar()">Atualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
