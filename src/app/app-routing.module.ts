@@ -3,13 +3,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProdutoComponent } from './produto/produto.component'
 import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component'
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'produto', component: ProdutoComponent },
-  { path: 'editar/:id', component: EditarComponent }
+  { path: 'editar/:id', component: EditarComponent },
+  { path: 'deletar/:id', component: DeletarComponent }
+
 
 ];
 

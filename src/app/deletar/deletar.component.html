@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="text-center mb-4">Deletar Produtos</h1>
+    <div class="row">
+        <div class="col-md-4">
+
+            <!-- Apresentação dos Produtos -->
+            <div class="card mb-3" style="width: 18rem;">
+                <img src="{{produto.imagem}}" class="card-img-top img" alt="imagem do produto">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{produto.nome}}</h5>
+                    <p class="card-text text-center">Código: {{produto.id}}</p>
+                    <p class="card-text text-center">Preço: {{produto.preco | currency: "BRL"}}</p>
+                    <p class="card-text text-center">Quantidade em Estoque {{produto.qtdEstoque}}</p>
+
+                    <hr class="mt-2 mb-2">
+                    <h5>Deseja Apagar esse produto?</h5>
+
+                    <div class="div d-flex justify-content-center">
+                        <a class="btn btn-outline-info mr-5" (click)="btnNao()">Não</a>
+                        <a class="btn btn-outline-danger" (click)="btnSim()">Sim</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</div>

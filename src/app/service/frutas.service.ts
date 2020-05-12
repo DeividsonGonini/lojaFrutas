@@ -24,4 +24,9 @@ export class FrutasService {
   putProduto(produto: Produto) {
     return this.http.put('http://31.220.57.121:9080/produtos/', produto)
   }
+
+
+  deleteProduto(id: number) {
+    return this.http.delete(`http://31.220.57.121:9080/produtos/${id}`)
+  }
 }

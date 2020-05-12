@@ -32,6 +32,13 @@
 
 
     <h1 class="text-center">Lista de Frutas</h1>
+
+    <div *ngIf='alerta'>
+        <div class="alert alert-success" role="alert">
+            Produto deletado com sucesso ;)
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-4" *ngFor="let produto of listaProdutos">
 
@@ -45,7 +52,7 @@
                     <p class="card-text text-center">Quantidade em Estoque {{produto.qtdEstoque}}</p>
                     <div class="div d-flex justify-content-center">
                         <a href="#" class="btn btn-outline-info mr-5" [routerLink]="['/editar', produto.id]">Editar</a>
-                        <a href="#" class="btn btn-outline-danger">Apagar</a>
+                        <a href="#" class="btn btn-outline-danger" [routerLink]="['/deletar', produto.id]">Apagar</a>
                     </div>
 
                 </div>
